@@ -1,0 +1,2 @@
+awk '{if(! a[$6]){print; a[$6]++}}' test.star > test1.star or awk '{if(! a[$1$2$6]){print; a[$6]++}}' test.star > test1.star
+# $6 is rlnImageName
