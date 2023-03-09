@@ -1,4 +1,4 @@
-Awk ‘{ if (NR>=59) { print $6}}’ selected_particle.star> c.star
+Awk ‘{ if (NR>=59) { print $6}}’ selected_particle.star> c.star # the first 58 line is head
 for i in $(cat c.star) ; do grep $i particles.star; done > particles1.star
 head -n 58 particles.star > ./ head.txt
 cat head.txt particles1.star>./particles_final.star
