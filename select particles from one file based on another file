@@ -2,3 +2,7 @@ Awk ‘{ if (NR>=59) { print $6}}’ selected_particle.star> c.star # the first 
 for i in $(cat c.star) ; do grep $i particles.star; done > particles1.star
 head -n 58 particles.star > ./ head.txt
 cat head.txt particles1.star>./particles_final.star
+
+
+#This comand also work!
+awk 'FNR==NR{arr[$6];next} (($6) in arr)' test1.star shiny1.star > shiny3.star #$6 is particle image name
